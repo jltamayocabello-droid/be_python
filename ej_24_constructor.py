@@ -11,6 +11,6 @@ class CuentaBancaria:
     def __init__(self, saldo):
         if saldo < 0:
             print("No puede ser negativo")
-self.saldo = saldo
+            self.saldo = saldo
 
 cuenta = CuentaBancaria(100)
