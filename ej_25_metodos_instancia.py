@@ -27,3 +27,11 @@ class Usuario:
 juan = Usuario("Juan")
 pedro = Usuario("Elizabeth")
 print(Usuario.obtener_cantidad_usuarios())
+
+# Metodos estáticos
+class Calculadora:
+    @staticmethod
+    def sumar(a, b):
+        return a + b
+    
+resultado = Calculadora.sumar(200, 4)
