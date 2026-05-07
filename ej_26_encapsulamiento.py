@@ -22,3 +22,5 @@ class CuentaBancaria:
         
 cuenta1 = CuentaBancaria("Alberto Rozas", 2000)
 print(cuenta1.obtener_saldo)
+print(cuenta1.depositar(50000))
+print(cuenta1.retirar(3000))
