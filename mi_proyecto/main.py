@@ -1,5 +1,6 @@
 import calculadora
 from math import sqrt
+import numpy as np
 
 print(sqrt(16))
 
