@@ -2,3 +2,12 @@ archivo = open("mensaje.txt", "r")
 contenido = archivo.read()
 archivo.close()
 print(contenido)
+
+#Escribir en un archivo
+
+archivo1 = open("salida.txt", "w")
+
+archivo1.write("Resultado de la prueba")
+
+archivo1.write("Caso número 1")
+archivo1.close()
