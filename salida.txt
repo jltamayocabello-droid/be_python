@@ -1,1 +1,2 @@
-Resultado de la pruebaCaso número 1
+Resultado de la prueba
+Caso número 1

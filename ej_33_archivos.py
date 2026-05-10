@@ -7,7 +7,7 @@ print(contenido)
 
 archivo1 = open("salida.txt", "w")
 
-archivo1.write("Resultado de la prueba")
+archivo1.write("Resultado de la prueba\n")
 
 archivo1.write("Caso número 1")
 archivo1.close()
