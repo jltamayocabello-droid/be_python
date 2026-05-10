@@ -1,1 +1,3 @@
-nombre
+nombre,apellido,rol
+Miguel,Santos,qa
+Rafael,Miralles,dev
