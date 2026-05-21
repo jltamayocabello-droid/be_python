@@ -2,21 +2,19 @@
 
 archivo = input("Ingrese la ruta del archivo: ")
 try:
-    with open(archivo, "r", encoding="utf-8") as f:
-        texto = f.read()
-except FileNotFoundError:
-    print("El archivo no existe")
-    exit()
+    with open(archivo, "r", encoding="utf-8") as f:  
 
 # 2. Leer el contenido del archivo.
 
+ texto = f.read()
+except FileNotFoundError:
+    print("El archivo no existe")
+    exit()
  
-
- 
-
 # 3. Separar en palabras.
 
 # 4. Contar número total de palabras.
+
 
  
 
