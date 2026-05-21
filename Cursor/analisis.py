@@ -6,25 +6,26 @@ import pandas as pd
 RUTA_CSV = Path(__file__).parent / "datos.csv"
 
 
-def estadisticas_columnas(ruta: str | Path = RUTA_CSV) -> tuple[pd.Series, pd.Series]:
-    """
-    Lee un CSV y devuelve la media y la desviación estándar de cada columna numérica.
-    """
-    df = pd.read_csv(ruta)
+def cargar_datos(ruta: str | Path = RUTA_CSV) -> pd.DataFrame:
+    """Lee el CSV una sola vez y devuelve el DataFrame."""
+    return pd.read_csv(ruta)
+
+
+def estadisticas_columnas(df: pd.DataFrame) -> tuple[pd.Series, pd.Series]:
+    """Devuelve la media y la desviación estándar de las columnas numéricas."""
     media = df.mean(numeric_only=True)
     desviacion = df.std(numeric_only=True)
     return media, desviacion
 
 
 def guardar_scatter_columnas(
-    ruta: str | Path = RUTA_CSV,
+    df: pd.DataFrame,
     archivo_salida: str | Path | None = None,
 ) -> Path:
     """
     Genera un scatter plot de las dos primeras columnas numéricas y lo guarda en disco.
     Usa la interfaz orientada a objetos de matplotlib (Figure y Axes).
     """
-    df = pd.read_csv(ruta)
     numericas = df.select_dtypes(include="number")
 
     if numericas.shape[1] < 2:
@@ -50,11 +51,13 @@ def guardar_scatter_columnas(
 
 
 if __name__ == "__main__":
-    media, desviacion = estadisticas_columnas()
+    datos = cargar_datos()
+
+    media, desviacion = estadisticas_columnas(datos)
     print("Media:")
     print(media)
     print("\nDesviación estándar:")
     print(desviacion)
 
-    ruta_grafico = guardar_scatter_columnas()
+    ruta_grafico = guardar_scatter_columnas(datos)
     print(f"\nScatter plot guardado en: {ruta_grafico}")
