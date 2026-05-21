@@ -13,6 +13,9 @@ except FileNotFoundError:
  
 # 3. Separar en palabras.
 
+import re
+palabras = re.findall(r'\b\w+\b', texto.lower())
+
 # 4. Contar número total de palabras.
 
 
