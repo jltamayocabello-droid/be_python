@@ -23,4 +23,9 @@ print(f"El total de palabras es: {total_palabras}")
  
 # 5. (Opcional) Mostrar las 10 palabras más frecuentes y su conteo.
 
- 
+ contador = Counter(palabras)
+ mas_frecuentes = contador.most_common(10)
+ print(f"Las 10 palabras más frecuentes son: {mas_frecuentes}")
+
+ for palabra, conteo in mas_frecuentes:
+     print(f"{palabra}: {conteo}")
