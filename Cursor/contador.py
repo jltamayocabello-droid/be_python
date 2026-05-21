@@ -18,11 +18,9 @@ palabras = re.findall(r'\b\w+\b', texto.lower())
 
 # 4. Contar número total de palabras.
 
-
+total_palabras = len(palabras)
+print(f"El total de palabras es: {total_palabras}")
  
-
- 
-
 # 5. (Opcional) Mostrar las 10 palabras más frecuentes y su conteo.
 
  
