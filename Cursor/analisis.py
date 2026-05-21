@@ -1,21 +1,17 @@
 from pathlib import Path
-from typing import Final, TypeAlias, TYPE_CHECKING
+from typing import Final
 
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
-if TYPE_CHECKING:
-    SeriesNumericas: TypeAlias = pd.Series[float]
-else:
-    SeriesNumericas: TypeAlias = pd.Series
+type RutaArchivo = Path
+type SeriesNumericas = pd.Series
+type Estadisticas = tuple[pd.Series, pd.Series]
 
 RUTA_CSV: Final[Path] = Path(__file__).parent / "datos.csv"
 RUTA_SCATTER: Final[Path] = Path(__file__).parent / "scatter_columnas.png"
-
-RutaArchivo: TypeAlias = Path
-Estadisticas: TypeAlias = tuple[SeriesNumericas, SeriesNumericas]
 
 
 class ErrorCargaDatos(Exception):
