@@ -170,8 +170,7 @@ pip install pandas matplotlib pytest
 
 ## ✒️ Autor
 **Jorge Tamayo Cabello**
-- 🔗 **GitHub:** [@jltamayocabello-droid](https://github.com/jltamayocabello-droid)
-- 🎓 *Estudiante de Backend Developer (Udemy) & Desarrollo Inteligente con IA (Santander Open Academy)*
+*Diseñador Front-End*
 
 ---
 
